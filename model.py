@@ -39,11 +39,11 @@ model.compile(optimizer='adam',loss='binary_crossentropy',metrics=['accuracy'])
     
 train_datagen = ImageDataGenerator(rescale=1./255,shear_range=0.2,zoom_range=0.2,horizontal_flip=True)
 test_datagen = ImageDataGenerator(rescale=1./255)
-training_set = train_datagen.flow_from_directory('C://Users//RAM BABU SINGH//OneDrive//Desktop//skin//Skin_cancer//Train',
+training_set = train_datagen.flow_from_directory('Skin_cancer/Train',
 target_size=(224, 224),
 batch_size=1,
 class_mode='binary')
-test_set = test_datagen.flow_from_directory('C://Users//RAM BABU SINGH//OneDrive//Desktop//skin//Skin_cancer//Test',
+test_set = test_datagen.flow_from_directory('Skin_cancer/Test',
 target_size=(224, 224),
 batch_size=1,
 class_mode='binary')
