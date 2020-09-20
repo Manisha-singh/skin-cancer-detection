@@ -90,15 +90,6 @@ checkpoint = ModelCheckpoint("monkey_breed_mobileNet.h5",
                              save_best_only = True,
                              verbose=1)
 
-#earlystop = EarlyStopping(monitor = 'val_loss', 
- #                         min_delta = 0, 
-  #                        patience = 3,
-   #                       verbose = 1,
-    #                      restore_best_weights = True)
-
-# we put our call backs into a callback list
-#callbacks = [earlystop, checkpoint]
-
 # We use a very small learning rate 
 model.compile(loss = 'categorical_crossentropy',
               optimizer = RMSprop(lr = 0.001),
