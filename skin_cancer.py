@@ -110,7 +110,6 @@ nb_validation_samples = 100
 
 epochs = i*2
 batch_size = 10
-
 history = model.fit_generator(
     train_generator,
     steps_per_epoch = nb_train_samples // batch_size,
@@ -118,10 +117,10 @@ history = model.fit_generator(
     #callbacks = callbacks,
     validation_data = validation_generator,
     validation_steps = nb_validation_samples // batch_size)
-    model.summary()
-    accuracy=result.history['accuracy'][0]*100
-    print("current accuracy=", x)
-    model.save("skin_cancer_mobileNet.h5")
-    sys.stdout=open("accuracy.txt","w")
-    print(int(result.history['accuracy'][-1]*100))
-    sys.stdout.close()
+model.summary()
+accuracy=result.history['accuracy'][0]*100
+print("current accuracy=", x)
+model.save("skin_cancer_mobileNet.h5")
+sys.stdout=open("accuracy.txt","w")
+print(int(result.history['accuracy'][-1]*100))
+sys.stdout.close()
