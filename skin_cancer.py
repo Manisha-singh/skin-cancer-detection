@@ -119,7 +119,7 @@ history = model.fit_generator(
     validation_steps = nb_validation_samples // batch_size)
 model.summary()
 accuracy=history.history['accuracy'][0]*100
-print("current accuracy=", x)
+print("current accuracy=", accuracy)
 model.save("skin_cancer_mobileNet.h5")
 sys.stdout=open("accuracy.txt","w")
 print(int(result.history['accuracy'][-1]*100))
