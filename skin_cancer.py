@@ -113,5 +113,5 @@ accuracy=history.history['accuracy'][0]*100
 print("current accuracy=", accuracy)
 model.save("skin_cancer_mobileNet.h5")
 sys.stdout=open("accuracy.txt","w")
-print(int(result.history['accuracy'][-1]*100))
+print(int(history.history['accuracy'][-1]*100))
 sys.stdout.close()
