@@ -51,8 +51,8 @@ print(model.summary())
 
 from keras.preprocessing.image import ImageDataGenerator
 
-train_data_dir = 'C://Users//RAM BABU SINGH//OneDrive//Desktop//skin//Skin_cancer//Train'
-validation_data_dir = 'C://Users//RAM BABU SINGH//OneDrive//Desktop//skin//Skin_cancer//Test'
+train_data_dir = 'Skin_cancer/Train'
+validation_data_dir = 'Skin_cancer/Test'
 
 # Let's use some data augmentaiton 
 train_datagen = ImageDataGenerator(
